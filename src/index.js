@@ -7,6 +7,13 @@ function addRandomNum() {
   document.body.appendChild(p)
 }
 
+if(numbers>6){
+arr.shift;
+}
+else if(numbers>6 + arr.shift){
+arr.push;
+}
+
 {
   const button1 = document.getElementById('button1')
   button1.addEventListener("click", addRandomNum);
