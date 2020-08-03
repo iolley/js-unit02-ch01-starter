@@ -15,9 +15,9 @@ function addRandomNum() {
     numbers.push();
   }
 }
+
 {
   const button1 = document.getElementById('button1')
   button1.addEventListener("click", addRandomNum);
   console.log("ready");
-  //
 }
