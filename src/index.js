@@ -20,4 +20,9 @@ function addRandomNum() {
   const button1 = document.getElementById('button1')
   button1.addEventListener("click", addRandomNum);
   console.log("ready");
+  
+  function sortedArray(){
+    const sortedNumbers(numbers >=5);
+    const result = _.sortedUniq(sortedArray);
+  }
 }
