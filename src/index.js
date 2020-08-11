@@ -12,6 +12,7 @@ function addRandomNum() {
   if (numbers >= 5) {
     numbers.shift();
   } else {
+    console.log('ここはpush()');
     numbers.push();
   }
 }
@@ -21,5 +22,7 @@ function addRandomNum() {
   button1.addEventListener("click", addRandomNum);
   console.log("ready");
   
+}
+function recordNum(){
 }
 
