@@ -9,12 +9,12 @@ function addRandomNum() {
   document.body.appendChild(p)
 //.shift  先頭を消す　５個以上の場合
 //.push   後ろに入れる　５個以上になり、先頭が抜けた場合
-  if (numbers >= 5) {
-    numbers.shift();
-  } else {
-    console.log('ここはpush()');
-    numbers.push();
+  if (numbers.length === 5) {
+    console.log('ここはshift()')
+    numbers.shift(_.random(0, 5));
   }
+  console.log('ここはif文の外');
+  numbers.push(_.random(6, 10));
 }
 
 {
