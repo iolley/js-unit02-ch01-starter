@@ -11,10 +11,10 @@ function addRandomNum() {
 //.push   後ろに入れる　５個以上になり、先頭が抜けた場合
   if (numbers.length === 5) {
     console.log('ここはshift()')
-    numbers.shift(_.random(0, 5));
+    numbers.shift(_.random(5,true));
   }
   console.log('ここはif文の外');
-  numbers.push(_.random(6, 10));
+  numbers.push(_.random(6,ture));
 }
 
 {
