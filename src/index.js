@@ -10,7 +10,7 @@ let numbers = [];
 function addRandomNum() {
   const mainEl = document.getElementById('main');
   let p = document.createElement('p')
-  const randomNum = _.random(0, 10)
+  const randomNum = _.random(0,10)
   p.innerHTML = "Random Number: " + randomNum.toString();
   document.body.appendChild(p)
   if (numbers.length === 5) {
@@ -28,11 +28,13 @@ function addRandomNum() {
 //.push   後ろに入れる　５個以上になり、先頭が抜けた場合
 
 function randomNum() {
-  const sum = _.sum();//sum の引数はユーザーの出したランダムな数値すべて
+  const sum = _.sum(0,10);//sum の引数はユーザーの出したランダムな数値すべて
   const mainEl = document.getElementById('main');
   let p = document.createElement('p')
-  const randomNum = _.random(0, 10)
-  p.innerHTML = "Random Numbers: " + randomNum.toString();// ランダムな数値のアウトプット表記"Random Number: "が2つできています。こちらの関数の役割を考えて表記を変えましょう
+  const SumRandomNum = _.sum(0,10);
+  for (var i = 0 ; i < 10 ; i++)
+    print(Math.random());
+  p.innerHTML = "Sum Numbers: " + SumRandomNum.toString();// ランダムな数値のアウトプット表記"Random Number: "が2つできています。こちらの関数の役割を考えて表記を変えましょう
   document.body.appendChild(p)
 } 
   // 関数randumNumはここに用意をしておいた方がいいかどうかはまだわかりません。
@@ -41,9 +43,12 @@ function randomNum() {
   // ここは関数addRandomNumのローカルスコープ内です
 
 {
-  const buttons = document.getElementById('buttons1' + 'buttons2')
-  buttons addEventListener("click", addRandomNum);
+  const button1 = document.getElementById('button1')
+  button1.addEventListener("click", addRandomNum);
+  console.log("ready");
+
+  const button2 = document.getElementById('button2')
+  button2.addEventListener("click", randomNum);
   console.log("ready"); 
 }
-{// button1とひとまとめにしましょう。分ける必要はないです
- 
+// button1とひとまとめにしましょう。分ける必要はないです
