@@ -32,7 +32,7 @@ function randomNum() {
   const mainEl = document.getElementById('main');
   let p = document.createElement('p')
   const randomNum = _.random(0, 10)
-  p.innerHTML = "Random Number: " + randomNum.toString();
+  p.innerHTML = "Random Numbers: " + randomNum.toString();// ランダムな数値のアウトプット表記"Random Number: "が2つできています。こちらの関数の役割を考えて表記を変えましょう
   document.body.appendChild(p)
 } 
   // 関数randumNumはここに用意をしておいた方がいいかどうかはまだわかりません。
@@ -41,12 +41,9 @@ function randomNum() {
   // ここは関数addRandomNumのローカルスコープ内です
 
 {
-  const button1 = document.getElementById('button1')
-  button1.addEventListener("click", addRandomNum);
+  const buttons = document.getElementById('buttons1' + 'buttons2')
+  buttons addEventListener("click", addRandomNum);
   console.log("ready"); 
 }
-{
-  const button2 = document.getElementById('button2')
-  button2.addEventListener("click", randomNum);
-  console.log("ready"); 
-}
+{// button1とひとまとめにしましょう。分ける必要はないです
+ 
