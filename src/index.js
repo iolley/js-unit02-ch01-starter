@@ -10,7 +10,7 @@ let numbers = [];
 function addRandomNum() {
   const mainEl = document.getElementById('main');
   let p = document.createElement('p')
-  const randomNum = _.random(0,1,2,3,4,5,6,7,8,9,10)//sum の引数はユーザーの出したランダムな数値すべて →lodashのsumメソッドの基本構文をもう一度確認してください、引数は「0から10」のようには書けません。引数に入ることのできる値の型を確認してください
+  const randomNum = _.random(0,10)//sum の引数はユーザーの出したランダムな数値すべて →lodashのsumメソッドの基本構文をもう一度確認してください、引数は「0から10」のようには書けません。引数に入ることのできる値の型を確認してください
   p.innerHTML = "Random Number: " + randomNum.toString();
   document.body.appendChild(p)
   if (numbers.length === 5) {
@@ -35,7 +35,7 @@ function randomNum() {
 
   ​// ↓ これは何を繰り返し処理させる目的なのか、考えましょう。そして必要な記述であればfor文の基本構文が崩れています。
   for (var i = 0 ; i < 10 ; i++)
-    print(Math.random());// ← この行はどういう目的で書いたのかをSlackで教えてください
+  // ← この行はどういう目的で書いたのかをSlackで教えてください
   p.innerHTML = "Sum Numbers: " + SumRandomNum.toString();// ランダムな数値のアウトプット表記"Random Number: "が2つできています。こちらの関数の役割を考えて表記を変えましょう
   document.body.appendChild(p)
 } 
