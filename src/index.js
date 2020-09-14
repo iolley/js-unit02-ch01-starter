@@ -28,15 +28,12 @@ function addRandomNum() {
 //.push   後ろに入れる　５個以上になり、先頭が抜けた場合
 
 function randomNum() {
-  const sum = _.sum(0,10);//sum の引数はユーザーの出したランダムな数値すべて
+  const sum = _.sum(numbers);//sum の引数はユーザーの出したランダムな数値すべて
   const mainEl = document.getElementById('main');
   let p = document.createElement('p')
+  
   // 31行目に全く同じ値で定数の用意があります。この行は消しましょう
-
-  ​// ↓ これは何を繰り返し処理させる目的なのか、考えましょう。そして必要な記述であればfor文の基本構文が崩れています。
-  for (var i = 0 ; i < 10 ; i++)
-  // ← この行はどういう目的で書いたのかをSlackで教えてください
-  p.innerHTML = "Sum Numbers: " + SumRandomNum.toString();// ランダムな数値のアウトプット表記"Random Number: "が2つできています。こちらの関数の役割を考えて表記を変えましょう
+  p.innerHTML = "Sum Random Number: " + sum.toString();// ランダムな数値のアウトプット表記"Random Number: "が2つできています。こちらの関数の役割を考えて表記を変えましょう
   document.body.appendChild(p)
 } 
   // 関数randumNumはここに用意をしておいた方がいいかどうかはまだわかりません。
